@@ -1,0 +1,3 @@
+jdbc:mysql://sql289.main-hosting.eu/u621224220_eden
+u621224220_root
+Thealex1027

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="612" pageHeight="792" columnWidth="572" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="358039bc-ead3-4d3e-9572-9a71ab957067">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Nombre_ususario" class="java.lang.String"/>
+	<parameter name="nombre_cliente" class="java.lang.String"/>
+	<parameter name="num_cot" class="java.lang.String"/>
+	<parameter name="sub_total" class="java.lang.String"/>
+	<parameter name="itbis_total" class="java.lang.String"/>
+	<parameter name="total_t" class="java.lang.String"/>
+	<parameter name="fecha_ft" class="java.lang.String"/>
+	<parameter name="Logo" class="java.io.InputStream"/>
+	<parameter name="Titulo" class="java.io.InputStream"/>
+	<parameter name="descuento" class="java.lang.String"/>
+	<parameter name="nota" class="java.lang.String"/>
+	<field name="cantidad" class="java.lang.String"/>
+	<field name="descripcion" class="java.lang.String"/>
+	<field name="itbis" class="java.lang.String"/>
+	<field name="total" class="java.lang.String"/>
+	<field name="precio" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="260" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="3" width="135" height="76" uuid="5dfb0797-a217-4657-afff-ef356c80c882"/>
+				<imageExpression><![CDATA[$P{Logo}]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="354" y="14" width="197" height="61" uuid="f546be67-3ddd-4e14-8087-9eab0f5a9521"/>
+				<imageExpression><![CDATA[$P{Titulo}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="0" y="154" width="100" height="20" forecolor="#4D4D4D" uuid="f680d38a-43a1-4f96-bb4b-7a5799511678"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog" size="10"/>
+				</textElement>
+				<text><![CDATA[809-247-9296]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="140" width="138" height="20" uuid="93aedec7-1420-419b-af55-fc87e5fbe3ce"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E-mail:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="115" width="138" height="20" forecolor="#4D4D4D" uuid="38b2a5bf-5d46-4c8a-9779-c227e28ef9d5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog" size="10"/>
+				</textElement>
+				<text><![CDATA[Rnc 131726194]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="135" y="154" width="138" height="20" forecolor="#4D4D4D" uuid="6f49504e-3bf6-4fe0-888c-09f8dbcd49dd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog" size="10"/>
+				</textElement>
+				<text><![CDATA[Creatividad@eden.do]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="140" width="100" height="20" uuid="1f32e77e-1da5-4126-944f-a87870754a97"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contacto:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="364" y="140" width="138" height="20" uuid="c0a1b3fc-11cb-4c9c-9b2f-1692c55ab0d7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="364" y="101" width="100" height="20" uuid="fe5278e4-005d-4690-b076-811b46ed8560"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cliente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="364" y="115" width="100" height="20" forecolor="#4D4D4D" uuid="e148556c-ae66-461f-bac8-e597e46bbcb9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nombre_cliente}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="475" y="101" width="91" height="20" uuid="212c54ee-30d8-4b30-a7ec-53f939d63dbd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cotización No.:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="475" y="115" width="91" height="20" forecolor="#4D4D4D" uuid="ebe508f0-9aac-4f8e-83a0-0e08e3c006ab"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{num_cot}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="94" width="572" height="1" forecolor="#A4E57F" uuid="35b104b7-2b9c-4d99-baa9-59793d30c1c5"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="135" y="166" width="138" height="20" forecolor="#4D4D4D" uuid="7f25ff80-7363-4fc9-8edf-e620044917b4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog" size="10"/>
+				</textElement>
+				<text><![CDATA[info@eden.do]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="364" y="154" width="138" height="20" forecolor="#4D4D4D" uuid="c7be5d9d-46b0-4fe2-8569-eaf9b9562236"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{fecha_ft}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="214" width="283" height="26" uuid="1c9ce2cb-b0ff-4d0c-abe8-01757e53eec8"/>
+				<textElement>
+					<font fontName="Dialog" size="20" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Detalle del Pedido ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="240" width="572" height="20" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" backcolor="#A5E580" uuid="c0fa6ce0-5f49-4a7a-b96e-520a26e7fd3f"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="135" y="240" width="217" height="20" forecolor="#646368" uuid="54fdf38b-556b-4371-b0e6-e63b631e866b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog"/>
+				</textElement>
+				<text><![CDATA[Descripcion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="354" y="240" width="114" height="20" forecolor="#646368" uuid="f428b16f-40eb-4486-957d-8310f32ff5ab"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Dialog"/>
+				</textElement>
+				<text><![CDATA[ITBIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="240" width="66" height="20" forecolor="#646368" uuid="4f64f15f-fea1-422e-aef5-6a32db1d5267"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Dialog"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="468" y="240" width="98" height="20" forecolor="#646368" uuid="43aeebda-34ea-4f89-b8f7-1f043259195e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Dialog"/>
+				</textElement>
+				<text><![CDATA[Valor]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="204" width="572" height="1" forecolor="#A4E57F" uuid="dd8e352c-5beb-45eb-ae10-7e4c6b6e07e3"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="101" width="138" height="20" uuid="2b558611-f805-40c2-af5e-33910c4830d0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Eden Media Group]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="5" y="0" width="23" height="20" uuid="89679f35-db8e-4773-ae58-69f5398cb78b"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="135" y="0" width="217" height="20" uuid="02679b00-cabd-4130-aa8b-6523a6e217f9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="354" y="0" width="114" height="20" uuid="24e7baad-c626-4aed-b7d2-cc6696696ae2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Dialog"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{itbis}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="468" y="0" width="98" height="20" uuid="7637031e-f060-4bec-8d77-5f03b5029363"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Dialog"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="14" y="0" width="20" height="20" uuid="770e3957-d398-4ebe-8cde-1426655d66c7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Dialog" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="33" y="0" width="102" height="20" uuid="0d616940-e427-4028-ba9d-54278f8b7502"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band height="193">
+			<staticText>
+				<reportElement x="366" y="132" width="100" height="20" uuid="230a8cec-00d3-4915-b006-9eab10eadd69"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Dialog" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-1" y="152" width="570" height="23" uuid="e719559a-3708-4268-a65c-95ecfbf6dea9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Dialog" size="12"/>
+				</textElement>
+				<text><![CDATA[Gracias por preferir nuestros servicios]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="466" y="132" width="103" height="20" forecolor="#000000" uuid="9001d63f-ba77-4924-8a22-e3d114081be7"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Dialog" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{total_t}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="366" y="74" width="100" height="20" uuid="494a4782-94d6-4991-b79a-4b582d7f899b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Dialog" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Sub Total]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="366" y="112" width="100" height="20" uuid="409975f3-30ca-4e36-8c4d-21943ec3a96b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Dialog" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Itbis 18%]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="466" y="74" width="100" height="20" uuid="dcb80c4c-5b61-428f-a624-780dda5b6c7b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Dialog"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sub_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="112" width="100" height="20" uuid="aeeb3666-126d-446c-9b21-3a4daa70181a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Dialog"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{itbis_total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="366" y="93" width="100" height="20" uuid="b26ae8f2-0749-41e6-bcbd-dd9728d55e7d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Dialog" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Descuento]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="466" y="93" width="100" height="20" uuid="215928e1-f929-44db-b3b9-d5f78b41c1c2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Dialog"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{descuento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="24" width="570" height="44" uuid="de8d569b-06c9-4f09-bdc9-97a4c6fb9cff"/>
+				<textElement>
+					<font fontName="Dialog"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nota}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="8" width="37" height="16" uuid="b8615483-3303-4e0a-bb47-084f79dda3fc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Dialog" size="12"/>
+				</textElement>
+				<text><![CDATA[Nota:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-1" y="68" width="570" height="1" forecolor="#A4E57F" uuid="2b35673c-348b-4526-812b-6da3de1d9042"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-1" y="6" width="572" height="1" forecolor="#A4E57F" uuid="641203e7-4c2d-4759-96fc-9c4d141a94d2"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</lastPageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
